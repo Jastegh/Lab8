@@ -75,7 +75,7 @@ public class CustomList extends ArrayAdapter<City> {
     /**
      * This deletes a city from the list
      * @param city
-     * This is a candidate city to add
+     * This is a candidate city
      */
     public void deleteCity(City city) {
         if (cities.contains(city)) {
@@ -83,11 +83,15 @@ public class CustomList extends ArrayAdapter<City> {
         }else {
             throw new NoSuchElementException("City Not found");
         }
-
     }
 
+    /**
+     * This counts the number of cities in the list
+     * @return
+     * returns the count of cities
+     */
     public int countCities(){
-
+        return cities.size();
     }
 
 }
