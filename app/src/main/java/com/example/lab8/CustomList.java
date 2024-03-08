@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
+import java.util.NoSuchElementException;
 
 public class CustomList extends ArrayAdapter<City> {
 
@@ -77,6 +78,11 @@ public class CustomList extends ArrayAdapter<City> {
      * This is a candidate city to add
      */
     public void deleteCity(City city) {
+        if (cities.contains(city)) {
+            cities.remove(city);
+        }else {
+            throw new NoSuchElementException("City Not found");
+        }
 
     }
 

@@ -61,7 +61,7 @@ public class CustomListTest {
         list.addCity(city);
         list.deleteCity(city);
         assertFalse(list.hasCity(city));
-        
+
     }
 
 
